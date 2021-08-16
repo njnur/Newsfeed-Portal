@@ -1,0 +1,6 @@
+django-environ
+django-oauth-toolkit
+Django
+djangorestframework
+psycopg2-binary
+django-extensions==3.1.3
