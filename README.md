@@ -49,7 +49,7 @@ docker-compose up -d
 * [Sendgrid](https://sendgrid.com/) - Used for sending emails
 * [Psycopg](https://www.psycopg.org/docs/) - PostgreSQL Database Adapter for Python
 
-### Folder Structure
+## Folder Structure
 
 ```
 NewsfeedPortal/         # Root Folder
