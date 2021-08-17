@@ -65,7 +65,7 @@ NewsfeedPortal/         # Root Folder
         |- apps.py
         |- models.py
         |- urls.py
-|- conf/                # Root folder for all the configuarations
+|- conf/                # Base folder for all the configuarations
     |- settings
         |- .env
         |- .env.example
@@ -86,13 +86,13 @@ NewsfeedPortal/         # Root Folder
     models.py
     mixins.py
     ...
-|- log                  # Folder contains log files
+|- log                  # Folder for all the logs
 |- static
 |- templates
 |- .gitignore           # gitignore
 |- Dockerfile
 |- docker-compose.yml
 |- manage.py            # Django's command-line utility
-|- requirements.txt     # Requires package file
+|- requirements.txt     # Required package file
 |- README.md
 ```
