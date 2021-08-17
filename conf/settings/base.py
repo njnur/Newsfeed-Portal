@@ -10,7 +10,7 @@ env = environ.Env(
 environ.Env.read_env()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
 # Quick-start development settings - unsuitable for production
@@ -20,13 +20,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-try:
-    PRODUCTION = env('PRODUCTION') == 'True'
-except:
-    pass
-DEBUG = env('DEBUG') == 'True'
+DEBUG = env.bool('DEBUG')
 
-ALLOWED_HOSTS = env("ALLOWED_HOSTS").split(",")
+ALLOWED_HOSTS = tuple(env.list('ALLOWED_HOSTS', default=[]))
 
 # Application definition
 PREREQ_APPS = [
@@ -38,12 +34,11 @@ PREREQ_APPS = [
     'django.contrib.staticfiles',
     'oauth2_provider',
     'rest_framework',
-    'django_extensions',
-    'oauth2_provider',
 ]
 
 PROJECT_APPS = [
-    'newsfeed'
+    'core',
+    'apps.newsfeed'
 ]
 
 INSTALLED_APPS = PREREQ_APPS + PROJECT_APPS
