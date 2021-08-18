@@ -34,7 +34,3 @@ class Headlines:
                 )
             return news_list
         return None
-
-    @staticmethod
-    def format_time(time: str) -> str:
-        pass
