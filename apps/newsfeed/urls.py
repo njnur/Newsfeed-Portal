@@ -1,7 +1,8 @@
-# from django.urls import path
-# from . import views
-#
-#
-# urlpatterns = [
-#     path('', , name='newsfeed')
-# ]
+from django.urls import path
+
+from apps.newsfeed.views.newsfeed import NewsfeedView
+
+
+urlpatterns = [
+    path('', NewsfeedView.as_view(), name='home')
+]
