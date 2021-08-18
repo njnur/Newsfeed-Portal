@@ -21,7 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
     # path('v1/', include(
-    #     ('apps.newsfeed.urls', 'newsfeed'),
-    #     namespace='newsfeed',)
+    #     ('apps.user.urls', 'user'),
+    #     namespace='user',)
     #     ),
 ]

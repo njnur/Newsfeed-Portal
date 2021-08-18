@@ -38,7 +38,8 @@ PREREQ_APPS = [
 
 PROJECT_APPS = [
     'core',
-    'apps.newsfeed'
+    'apps.user',
+    'apps.newsfeed',
 ]
 
 INSTALLED_APPS = PREREQ_APPS + PROJECT_APPS
