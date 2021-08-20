@@ -1,0 +1,151 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Newsfeed Settings</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900&amp;display=swap" rel="stylesheet">
+
+</head>
+<body data-new-gr-c-s-check-loaded="14.1026.0" data-gr-ext-installed="">
+
+<div class="container">
+    <header class="blog-header py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+            <div class="col-4 pt-1">
+            </div>
+            <div class="col-4 text-center">
+                <h3><a class="page-header text-dark" href="{% url 'newsfeed:home' %}">Newsfeed</a></h3>
+            </div>
+            <div class="col-4 d-flex justify-content-end align-items-center">
+                <a class="btn btn-sm btn-outline-secondary" href="{% url 'user:logout' %}">Log Out</a>
+            </div>
+        </div>
+    </header>
+</div>
+
+<main class="container">
+    <form method="post">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-6 col-md-4">
+
+                <h6>Country of news</h6>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="us" id="flexCheckDefault" name="country_1" checked>
+                    <label class="form-check-label" for="flexCheckDefault">
+                        USA
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="fr" id="flexCheckChecked1" name="country_2">
+                    <label class="form-check-label" for="flexCheckChecked1">
+                        France
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="au" id="flexCheckChecked2" name="country_3">
+                    <label class="form-check-label" for="flexCheckChecked2">
+                        Australia
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="sa" id="flexCheckChecked3" name="country_4">
+                    <label class="form-check-label" for="flexCheckChecked3">
+                        South Africa
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="eg" id="flexCheckChecked4" name="country_5">
+                    <label class="form-check-label" for="flexCheckChecked4">
+                        England
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="ca" id="flexCheckChecked5" name="country_6">
+                    <label class="form-check-label" for="flexCheckChecked5">
+                        Canada
+                    </label>
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-4">
+
+                <h6>Source of news</h6>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="bbc-news" id="flexCheckDefault10" name="source_1"
+                           checked>
+                    <label class="form-check-label" for="flexCheckDefault10">
+                        BBC
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="the-verge" id="flexCheckChecked11" name="source_2">
+                    <label class="form-check-label" for="flexCheckChecked11">
+                        The Verge
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="cnn" id="flexCheckChecked12" name="source_3">
+                    <label class="form-check-label" for="flexCheckChecked12">
+                        CNN
+                    </label>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4">
+
+                <h6>Keywords</h6>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Messi Leaving?" id="flexCheckChecked20"
+                           name="keywords_1">
+                    <label class="form-check-label" for="flexCheckChecked20">
+                        Messi Leaving?
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="FC Barcelona" id="flexCheckChecked21"
+                           name="keywords_2">
+                    <label class="form-check-label" for="flexCheckChecked21">
+                        FC Barcelona
+                    </label>
+                </div>
+
+            </div>
+
+        </div>
+
+        <br>
+        <br>
+        <button class="w-10 btn btn-md btn-primary" type="submit" value="settings">Save settings</button>
+
+    </form>
+
+</main>
+</body>
+</html>
