@@ -8,7 +8,6 @@ from django.contrib.auth.models import User
 class NewsfeedView(LoginRequiredMixin, TemplateView):
     login_url = 'user/login/'
     redirect_field_name = 'redirect_to'
-
     template_name = "newsfeed/newsfeed.html"
 
     def get_context_data(self, **kwargs):

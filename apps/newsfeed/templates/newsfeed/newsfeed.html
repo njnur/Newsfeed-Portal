@@ -67,5 +67,18 @@
         {% endfor %}
     </div>
 </main>
+
+<!--Refresh webpage after a certain interval-->
+<script>
+    function refresh() {
+    $.ajax({
+        url: "{% url 'newsfeed:home' %}",
+    });
+}
+
+var seconds = 3; // seconds, edit here
+setInterval(refresh(),seconds * 900);
+</script>
+
 </body>
 </html>
