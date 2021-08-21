@@ -65,6 +65,11 @@ http://127.0.0.1:8000/doc/
 * [Sendgrid](https://sendgrid.com/) - Used for sending emails
 * [Psycopg](https://www.psycopg.org/docs/) - PostgreSQL Database Adapter for Python
 
+## GIT branching Strategies
+**Gitflow** is used as a Git workflow here that will help with continuous software development and implementation of DevOps practices.
+
+![Gitflow](gitflow.png)
+
 ## Folder Structure
 
 ```
