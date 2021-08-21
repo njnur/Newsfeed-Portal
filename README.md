@@ -40,6 +40,22 @@ docker-compose build
 docker-compose up -d
 ```
 
+## API Documentation
+
+Check the API's in Swagger and Redoc
+
+**Redoc**
+
+```
+http://127.0.0.1:8000/redoc/
+```
+
+**Swagger Doc**
+
+```
+http://127.0.0.1:8000/doc/
+```
+
 ## Built With
 
 * [Python](https://www.python.org/) - Language Used
