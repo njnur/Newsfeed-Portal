@@ -2,6 +2,7 @@ from rest_framework import serializers
 from django.contrib.auth.models import User
 from django.contrib.auth import password_validation
 from rest_framework.authtoken.models import Token
+from apps.user.models import UserSettings
 
 
 class UserLoginSerializer(serializers.Serializer):
@@ -57,3 +58,9 @@ class PasswordChangeSerializer(serializers.Serializer):
     def validate_new_password(self, value):
         password_validation.validate_password(value)
         return value
+
+
+class SettingsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UserSettings
+        fields = ('user', 'country_of_news', 'news_source', 'keywords')

@@ -4,7 +4,8 @@ from rest_framework.decorators import action
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from django.contrib.auth import logout
-from apps.user.serializers import UserLoginSerializer, AuthUserSerializer, EmptySerializer, UserSignupSerializer, PasswordChangeSerializer
+from apps.user.serializers import UserLoginSerializer, AuthUserSerializer, EmptySerializer, UserSignupSerializer,\
+    PasswordChangeSerializer
 from apps.user.utils.authenticate import get_and_authenticated_user, create_user_account
 
 

@@ -12,11 +12,17 @@ class NewsfeedView(LoginRequiredMixin, TemplateView):
 
     def get_context_data(self, **kwargs):
         country_news = []
+        context = {}
 
         user = User.objects.get(username=self.request.user)
-        sett_response = UserSettings.objects.filter(
-            user=user
-        ).latest('created_at')
+
+        try:
+            sett_response = UserSettings.objects.filter(
+                user=user
+            ).latest('created_at')
+        except:
+            context['latest_news'] = Headlines().fetch_by_country(country='us')
+            return context
 
         countries = sett_response.country_of_news.split(',')
         for country in countries:
