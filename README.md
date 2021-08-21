@@ -2,6 +2,9 @@
 
 The objective of this project is to create a personalized Newsfeed portal.
 
+![newsfeed](newsfeed.png)
+
+
 ## Installation Notes
 
 Create a Virtual Environment. ***(Python Version >= 3.6+ Required)***  
@@ -46,11 +49,15 @@ Check the API's in Swagger and Redoc
 
 **Redoc**
 
+![Redoc](redoc.png)
+
 ```
 http://127.0.0.1:8000/redoc/
 ```
 
 **Swagger Doc**
+
+![Swagger](swagger.png)
 
 ```
 http://127.0.0.1:8000/doc/
