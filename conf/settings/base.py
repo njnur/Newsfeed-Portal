@@ -144,6 +144,13 @@ CORS_ALLOW_METHODS = [
     'PUT',
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ]
+}
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
