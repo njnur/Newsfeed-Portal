@@ -34,10 +34,12 @@ PREREQ_APPS = [
     'django.contrib.staticfiles',
     'oauth2_provider',
     'rest_framework',
+    'drf_yasg'
 ]
 
 PROJECT_APPS = [
     'core',
+    'apps.user',
     'apps.newsfeed'
 ]
 
@@ -129,6 +131,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_METHODS = [
     'DELETE',
@@ -138,6 +143,15 @@ CORS_ALLOW_METHODS = [
     'POST',
     'PUT',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 20
+}
 
 LOGGING = {
     'version': 1,

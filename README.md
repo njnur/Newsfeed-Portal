@@ -2,6 +2,9 @@
 
 The objective of this project is to create a personalized Newsfeed portal.
 
+![newsfeed](newsfeed.png)
+
+
 ## Installation Notes
 
 Create a Virtual Environment. ***(Python Version >= 3.6+ Required)***  
@@ -40,6 +43,26 @@ docker-compose build
 docker-compose up -d
 ```
 
+## API Documentation
+
+Check the API's in Swagger and Redoc
+
+**Redoc**
+
+![Redoc](redoc.png)
+
+```
+http://127.0.0.1:8000/redoc/
+```
+
+**Swagger Doc**
+
+![Swagger](swagger.png)
+
+```
+http://127.0.0.1:8000/doc/
+```
+
 ## Built With
 
 * [Python](https://www.python.org/) - Language Used
@@ -48,6 +71,11 @@ docker-compose up -d
 * [NewsAPI](https://newsapi.org/) - API's used for fetching news
 * [Sendgrid](https://sendgrid.com/) - Used for sending emails
 * [Psycopg](https://www.psycopg.org/docs/) - PostgreSQL Database Adapter for Python
+
+## GIT branching Strategies
+**Gitflow** is used as a Git workflow here that will help with continuous software development and implementation of DevOps practices.
+
+![Gitflow](gitflow.png)
 
 ## Folder Structure
 
