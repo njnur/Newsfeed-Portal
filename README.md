@@ -7,16 +7,18 @@ The objective of this project is to create a personalized Newsfeed portal.
 
 ## Installation Notes
 
-Create a Virtual Environment. ***(Python Version >= 3.6+ Required)***  
-To Check How to Create and Activate a Virtual Environment
-[(Click Here)](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
-
-If you haven't installed PostgreSQL into into your Local machine or Server. Please Install PostgreSQL. For Installing Documentations [Click Here](https://www.postgresql.org/docs/current/tutorial-install.html)
-
-Install the the Package Requirements from ``requirements.txt``.
+Create a Virtual Environment. Simply run
 
 ```
-pip install -r requirements.txt
+poetry shell
+```
+
+If you haven't installed Poetry into your Local machine or Server. Please Install Poetry. For Installing Documentations [Click Here](https://python-poetry.org/docs/#installation)
+
+Install the the Package Requirements from ``poetry.lock``.
+
+```
+poetry install
 ```
 
 Set up ``.env`` file in the folder directory ``conf/settings/.env``. Sample ``.env`` file is in the ``.env.example`` file. Add the necessary environment variable values
