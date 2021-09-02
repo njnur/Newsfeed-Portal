@@ -2,7 +2,7 @@
 
 The objective of this project is to create a personalized Newsfeed portal.
 
-![newsfeed](newsfeed.png)
+![newsfeed](readme/newsfeed.png)
 
 
 ## Installation Notes
@@ -49,7 +49,7 @@ Check the API's in Swagger and Redoc
 
 **Redoc**
 
-![Redoc](redoc.png)
+![Redoc](readme/redoc.png)
 
 ```
 http://127.0.0.1:8000/redoc/
@@ -57,7 +57,7 @@ http://127.0.0.1:8000/redoc/
 
 **Swagger Doc**
 
-![Swagger](swagger.png)
+![Swagger](readme/swagger.png)
 
 ```
 http://127.0.0.1:8000/doc/
