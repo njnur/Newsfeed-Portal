@@ -40,6 +40,7 @@ urlpatterns = [
          name='schema-swagger-ui'),  # <-- Here
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0),
          name='schema-redoc'),  # <-- Here
+    path('admin/doc/', include('django.contrib.admindocs.urls')),
     path('admin/', admin.site.urls),
     path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
     path('user/', include(('apps.user.urls', 'user'), namespace='user')),
